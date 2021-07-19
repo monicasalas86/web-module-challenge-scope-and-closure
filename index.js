@@ -70,7 +70,7 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(score){
+function inning(){
     return Math.floor(Math.random() * Math.floor(3));
 }
 
@@ -89,9 +89,14 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(inningcb, number){
+  return {
+    Home: inningcb(),
+    Away: inningcb()
+  }
 }
+
+console.log('task 3', finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
