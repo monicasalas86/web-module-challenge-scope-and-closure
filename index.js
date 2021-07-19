@@ -28,11 +28,19 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+
+    The difference between counter1 and counter2 is that counter1 uses a private variable (let count = 0) which is block scoped. This means that the variable count in counter1 can't be used outside of the function counterMaker. 
+    
+    In counter2, the variable count is outside of the function which means that it can be used outside of the function counter2.
+
   2. Which of the two uses a closure? How can you tell?
+
+    counter1 uses a closure, I can tell because there are two functions and closures give us the ability to put functions together.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+    counter1 would be preferable when we are passing down values to child level scopes. counter2 would be preferable if we need the variable count to apply to other functions outside of the block scope.
 */
 
 // counter1 code
